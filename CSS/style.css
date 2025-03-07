@@ -1,0 +1,205 @@
+/* Grundlegende Stile */
+:root {
+    --primary-color: #556B2F;       /* Olivgrün */
+    --secondary-color: #708238;     /* Helleres Olivgrün */
+    --accent-color: #3B5323;        /* Dunkleres Olivgrün */
+    --light-color: #E8EADC;         /* Sehr helles Olivgrün für Hintergründe */
+    --text-color: #333;             /* Dunkler Text */
+    --light-text: #fff;             /* Weißer Text */
+    --border-color: #AAB390;        /* Olivgrün-Grau */
+    --success-color: #4CAF50;       /* Grün für Erfolgsmeldungen */
+    --error-color: #F44336;         /* Rot für Fehlermeldungen */
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header-Stile */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--accent-color);
+}
+
+/* Hauptinhaltsbereich */
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* Formularstile */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button, .button {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+button:hover, .button:hover {
+    background-color: var(--accent-color);
+}
+
+.button.edit {
+    background-color: var(--secondary-color);
+}
+
+.button.delete {
+    background-color: var(--error-color);
+}
+
+/* Tabellendesign */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 15px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--light-color);
+}
+
+tr:hover {
+    background-color: rgba(85, 107, 47, 0.1);
+}
+
+/* Nachrichtenboxen */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: var(--success-color);
+    color: var(--light-text);
+}
+
+/* Footer-Stile */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 5px 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header, main {
+        padding: 15px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+    
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
